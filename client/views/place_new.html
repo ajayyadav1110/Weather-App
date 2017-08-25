@@ -1,0 +1,24 @@
+<div class="btn-group" >
+  <button type="button"><a href="/#/">Home</a></button>
+  <button type="button" ><a href="#/new">Create New Location</a></button>
+</div>
+
+  <h1 class="weather">New Location</h1>
+ 
+	  <div class="md" >
+  <form >
+    <label for="location" class="newloc">Location: </label><input ng-model="vm.newPlace.location" id="location" type="text" placeholder="Name of your location">
+   <label for="lat" class="newloc">Latitude: </label><input ng-model="vm.newPlace.lat" id="lat" type="text" placeholder="Type the lattitude">
+   <label for="lon" class="newloc">Longitude: </label><input ng-model="vm.newPlace.lon" id="lon" type="text" placeholder="Type the longitude">
+   
+    <a href="" class="createloc" ng-click="vm.addPlace()">Create New Location</a>
+  </form>
+
+	  
+	  
+        <p ng-if="vm.success">{{vm.success}}</p>
+        <div ng-if="vm.failure">
+          <p>Creation Failed</p>
+          <p ng-repeat="error in vm.errorMessages">{{error.message}}</p>
+        </div>
+      </form>
