@@ -20,7 +20,7 @@
       <label for="lon">Longitude: </label><input ng-model="vm.placeDetails.lon" id="lon" type="text">
         <button><a href="" ng-click="vm.getWeather()" class="btn btn-secondary btn-md">Generate Weather Report</a></button>
       </div>
-        <p ng-if="vm.success">{{vm.success}}</p>
+        <p ng-if="vm.success"><h1>{{vm.success}}</h1></p>
         <div ng-if="vm.failure">
           <p>Could Not Retrive Weather Data</p>
           <p ng-repeat="error in vm.errorMessages">{{error.message}}</p>
