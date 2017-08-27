@@ -18,7 +18,7 @@
      <label for="lat">Latitude: </label><input ng-model="vm.placeDetails.lat" id="lat" type="text">
      
       <label for="lon">Longitude: </label><input ng-model="vm.placeDetails.lon" id="lon" type="text">
-        <a href="" ng-click="vm.getWeather()" class="btn btn-secondary btn-md">Generate Weather Report</a>
+        <button><a href="" ng-click="vm.getWeather()" class="btn btn-secondary btn-md">Generate Weather Report</a></button>
       </div>
         <p ng-if="vm.success">{{vm.success}}</p>
         <div ng-if="vm.failure">
